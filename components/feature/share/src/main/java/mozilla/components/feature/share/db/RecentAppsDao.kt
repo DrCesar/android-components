@@ -5,6 +5,7 @@
 package mozilla.components.feature.share.db
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
@@ -22,6 +23,9 @@ internal interface RecentAppsDao {
 
     @Update
     fun updateRecentApp(recentApp: RecentAppEntity)
+
+    @Delete
+    fun deleteRecentApp(packageName: RecentAppEntity)
 
     @Update
     fun updateAllRecentApp(recentApps: List<RecentAppEntity>)

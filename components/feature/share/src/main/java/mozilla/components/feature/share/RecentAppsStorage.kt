@@ -37,6 +37,13 @@ class RecentAppsStorage(context: Context) {
         }
     }
 
+    fun deleteRecentApp(selectedPackageName: String) {
+        val recentAppEntity = database.value.recentAppsDao().getRecentApp(selectedPackageName)
+        recentAppEntity?.let {
+            database.value.recentAppsDao().deleteRecentApp(recentAppEntity);
+        }
+    }
+
     /**
      * Get a descending ordered list of the most recent apps
      * @param limit - size of list
