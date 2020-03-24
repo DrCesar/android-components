@@ -37,8 +37,12 @@ class RecentAppsStorage(context: Context) {
         }
     }
 
-    fun deleteRecentApp(selectedPackageName: String) {
-        val recentAppEntity = database.value.recentAppsDao().getRecentApp(selectedPackageName)
+    /**
+     * Deletes an app form the recent apps list
+     * @param activityName - name of the activity of the app
+     */
+    fun deleteRecentApp(activityName: String) {
+        val recentAppEntity = database.value.recentAppsDao().getRecentApp(activityName)
         recentAppEntity?.let {
             database.value.recentAppsDao().deleteRecentApp(recentAppEntity);
         }
