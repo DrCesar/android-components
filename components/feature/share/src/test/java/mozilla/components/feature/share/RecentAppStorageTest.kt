@@ -102,4 +102,19 @@ class RecentAppStorageTest {
 
         verify(recentAppsDao).insertRecentApp(result)
     }
+
+    @Test
+    fun `delete an app from our database`() {
+        val deleteAppName = "delete"
+        val deleteCount = 1
+        val recentApp = RecentAppEntity(
+                score = 1.0,
+                activityName = deleteAppName
+        )
+        whenever(recentAppsStorage.deleteRecentApp(deleteAppName)).thenReturn(deleteCount)
+
+        val result = recentAppsStorage.deleteRecentApp(recentApp.activityName)
+
+        assertEquals(deleteCount, result)
+    }
 }
