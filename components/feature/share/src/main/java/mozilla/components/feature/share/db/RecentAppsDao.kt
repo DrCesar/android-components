@@ -24,8 +24,10 @@ internal interface RecentAppsDao {
     @Update
     fun updateRecentApp(recentApp: RecentAppEntity)
 
-    @Delete
-    fun deleteRecentApp(packageName: RecentAppEntity)
+    @Query("""
+        DELETE FROM recent_apps_table
+        WHERE activityName = :activityName""")
+    fun deleteRecentApp(activityName: String): Int
 
     @Update
     fun updateAllRecentApp(recentApps: List<RecentAppEntity>)
