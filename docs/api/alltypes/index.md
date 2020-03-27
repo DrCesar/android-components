@@ -166,6 +166,7 @@
 | [mozilla.components.feature.customtabs.store.CustomTabsServiceStore](../mozilla.components.feature.customtabs.store/-custom-tabs-service-store/index.md) |  |
 | [mozilla.components.feature.customtabs.CustomTabsToolbarFeature](../mozilla.components.feature.customtabs/-custom-tabs-toolbar-feature/index.md) | Initializes and resets the Toolbar for a Custom Tab based on the CustomTabConfig. |
 | [mozilla.components.feature.addons.ui.CustomViewHolder](../mozilla.components.feature.addons.ui/-custom-view-holder/index.md) | A base view holder. |
+| [mozilla.components.concept.engine.DataCleanable](../mozilla.components.concept.engine/-data-cleanable/index.md) | Contract to indicate how objects with the ability to clear data should behave. |
 | [mozilla.components.browser.icons.loader.DataUriIconLoader](../mozilla.components.browser.icons.loader/-data-uri-icon-loader/index.md) | An [IconLoader](../mozilla.components.browser.icons.loader/-icon-loader/index.md) implementation that will base64 decode the image bytes from a data:image uri. |
 | [mozilla.components.service.glean.private.DatetimeMetricType](../mozilla.components.service.glean.private/-datetime-metric-type.md) |  |
 | [mozilla.components.browser.menu2.candidate.DecorativeTextMenuCandidate](../mozilla.components.browser.menu2.candidate/-decorative-text-menu-candidate/index.md) | Menu option that displays static text. |
@@ -736,6 +737,7 @@
 | [mozilla.components.browser.menu2.candidate.TextStyle](../mozilla.components.browser.menu2.candidate/-text-style/index.md) | Describes styling for text inside a menu option. |
 | [mozilla.components.tooling.lint.TextViewAndroidSrcXmlDetector](../mozilla.components.tooling.lint/-text-view-android-src-xml-detector/index.md) | A custom lint check that prohibits not using the app:srcCompat for ImageViews |
 | [mozilla.components.support.utils.ThreadUtils](../mozilla.components.support.utils/-thread-utils/index.md) |  |
+| [mozilla.components.support.test.ThrowProperty](../mozilla.components.support.test/-throw-property/index.md) | A [ReadWriteProperty](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html) implementation for creating stub properties. |
 | [mozilla.components.feature.session.ThumbnailsFeature](../mozilla.components.feature.session/-thumbnails-feature/index.md) | Feature implementation for automatically taking thumbnails of sites. The feature will take a screenshot when the page finishes loading, and will add it to the [Session.thumbnail](../mozilla.components.browser.session/-session/thumbnail.md) property. |
 | [mozilla.components.service.glean.private.TimeUnit](../mozilla.components.service.glean.private/-time-unit.md) |  |
 | [mozilla.components.service.glean.private.TimespanMetricType](../mozilla.components.service.glean.private/-timespan-metric-type.md) |  |

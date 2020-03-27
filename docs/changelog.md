@@ -12,8 +12,23 @@ permalink: /changelog/
 * [Gecko](https://github.com/mozilla-mobile/android-components/blob/master/buildSrc/src/main/java/Gecko.kt)
 * [Configuration](https://github.com/mozilla-mobile/android-components/blob/master/buildSrc/src/main/java/Config.kt)
 
+* **feature-addons**
+  * Added `AddonPermissionsAdapter.Style` and `AddonsManagerAdapter.Style` classes to allow UI customization.
+
 * **service-accounts-push**
   * Fixed a bug where the push subscription was incorrectly cached and caused some `GeneralError`s.
+
+* **feature-addons**
+  * Added `DefaultAddonUpdater.UpdateAttemptStorage` allows to query the last known state for a previous attempt to update an add-on.
+
+* **feature-accounts-push**
+  * Re-subscribe for Sync push support when notified by `onSubscriptionChanged` events.
+
+* **support-migration**
+  * ⚠️ **This is a breaking change**: `FennecMigrator` now takes `Lazy` references to storage layers.
+
+* **concept-storage**, **service-sync-logins**
+  * 🆕 New API: `PlacesStorage#warmUp`, `SyncableLoginsStorage#warmUp` - allows consumers to ensure that underlying storage database connections are fully established.
 
 # 37.0.0
 
@@ -34,6 +49,9 @@ permalink: /changelog/
   * It should now be possible to log-in on stable, stage and china FxA servers using a WebChannel flow.
   *  ⚠️ **This is a breaking change**: `FxaWebChannelFeature` takes a `ServerConfig` as 4th parameter to ensure incoming WebChannel messages
      are sent by the expected FxA host.
+
+* **feature-sitepermissions**
+  * Fixed issue [#6299](https://github.com/mozilla-mobile/android-components/issues/6299), from now on, any media requests like a microphone or a camera permission will require the system permissions to be granted before a dialog can be shown.
 
 * **service-sync-logins**
   * ⚠️ **This is a breaking change**: `DefaultLoginValidationDelegate`, `GeckoLoginStorageDelegate` constructors changed to take `Lazy<LoginsStorage>` instead of `LoginsStorage`, to facilitate late initialization.
